@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/EvanErickson/sorting-algo-typescript/issues"
   },
-  "homepage": "https://github.com/EvanErickson/sorting-algo-typescript#readme"
+  "homepage": "https://github.com/EvanErickson/sorting-algo-typescript#readme",
+  "dependencies": {
+    "concurrently": "^6.2.2"
+  },
+  "devDependencies": {
+    "@types/rewire": "^2.5.28",
+    "rewire": "^5.0.0"
+  }
 }
